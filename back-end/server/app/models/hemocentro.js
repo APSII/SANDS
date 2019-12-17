@@ -1,13 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Usuario = sequelize.define('Usuario', {
+  const Hemocentro = sequelize.define('Hemocentro', {
     nome: DataTypes.STRING,
-    identificador: DataTypes.STRING,
-    email: DataTypes.STRING,
     ativo: DataTypes.BOOLEAN
   }, {});
-  Usuario.associate = function(models) {
+  Hemocentro.associate = function(models) {
     // associations can be defined here
   };
-  return Usuario;
+  return Hemocentro;
 };
