@@ -20,19 +20,21 @@ const index = async (req, res)=>{
     }
 }
 
-const findone = async (req, res) => {
-    const Usuario = await req.context.models.Usuario.find(
-        req.params.id,
-    );
-    return res.send(Usuario);
+const findone = async (req, res)=>{
+    try{
+        models.Usuario.findOne({where:{id:req.params}}).then(usuarios =>{
+            res.status(200).json({usuarios})
+        })
+    }catch(error){
+        return res.status(500).json({error:error.message})
+    }
 }
-
 /*
 const destroy =  async (req, res) => {
-    const result = await req.context.models.Usuario.destroy({
+    const result = await models.Usuario.destroy({
       where: { id: req.params.id },
     });
     return res.send(true);
-}*/
-
+}
+*/
 module.exports = {createUser, index, findone/*, destroy*/}
