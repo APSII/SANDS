@@ -19,4 +19,20 @@ const index = async (req, res)=>{
         return res.status(500).json({error:error.message})
     }
 }
-module.exports = {createUser, index}
+
+const findone = async (req, res) => {
+    const Usuario = await req.context.models.Usuario.find(
+        req.params.id,
+    );
+    return res.send(Usuario);
+}
+
+/*
+const destroy =  async (req, res) => {
+    const result = await req.context.models.Usuario.destroy({
+      where: { id: req.params.id },
+    });
+    return res.send(true);
+}*/
+
+module.exports = {createUser, index, findone/*, destroy*/}
