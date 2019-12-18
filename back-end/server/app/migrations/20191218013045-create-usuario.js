@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Doador', {
+    return queryInterface.createTable('Usuarios', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -11,14 +11,18 @@ module.exports = {
       nome: {
         type: Sequelize.STRING
       },
-      cpf: {
+      identificador: {
         type: Sequelize.STRING
       },
-      dataNascimento: {
-        type: Sequelize.DATE
-      },
-      telefone: {
-        type: Sequelize.STRING
+      hemocentroId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: 'Hemocentros'
+          },
+          key: 'id'
+        },
+        allowNull: false
       },
       email: {
         type: Sequelize.STRING
@@ -37,6 +41,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Doadors');
+    return queryInterface.dropTable('Usuarios');
   }
 };

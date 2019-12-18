@@ -5,14 +5,18 @@ const bodyParser = require('body-parser')
 //Rotas
 const index = require('./app/routes/index');
 const usuario = require('./app/routes/usuario');
-const hemocentro = require('./app/routes/hemocentro');
+const hemocentro = require('./app/routes/hemocentro');/*
+const doador = require('./app/routes/doador');*/
+const teste = require('./app/teste')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+
 app.use('/', index);
 app.use('/usuario', usuario);
 app.use('/hemocentro', hemocentro);
+/*app.use('/doador', doador);*/
 
 app.use(bodyParser.json())
 
