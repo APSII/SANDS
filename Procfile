@@ -1,1 +1,1 @@
-web: node src/
+web: yarn start
