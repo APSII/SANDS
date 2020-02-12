@@ -37,7 +37,11 @@ module.exports = function (app) {
   // eslint-disable-next-line no-unused-vars
   endereco.associate = function ({hemocentro, cidade}) {
     // Define associations here
-    endereco.hasMany(hemocentro); 
+    endereco.hasMany(hemocentro,{
+      foreignKey: {
+        allowNull: false
+      }
+    }); 
     endereco.belongsTo(cidade);
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };

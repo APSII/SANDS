@@ -40,7 +40,11 @@ module.exports = function (app) {
   // eslint-disable-next-line no-unused-vars
   estado.associate = function ({cidade}) {
     // Define associations here
-    estado.hasMany(cidade);
+    estado.hasMany(cidade,{
+      foreignKey: {
+        allowNull: false
+      }
+    });
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 

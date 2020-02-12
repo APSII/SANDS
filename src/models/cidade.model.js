@@ -37,7 +37,11 @@ module.exports = function (app) {
   // eslint-disable-next-line no-unused-vars
   cidade.associate = function ({endereco, estado}) {
     // Define associations here
-    cidade.hasMany(endereco);
+    cidade.hasMany(endereco,{
+      foreignKey: {
+        allowNull: false
+      }
+    });
     cidade.belongsTo(estado);
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
