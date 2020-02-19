@@ -43,3 +43,17 @@ $ feathers help                           # Show all commands
 ## Help
 
 For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+
+## Parâmetros na QUERY
+Os parâmetros de query devem ser passados por STRING 
+
+**INCLUDE**
+Um include é a chamada de um arquivo para que ele seja executado junto à outro. Dessa forma, caso precise os dados de subniveis de relacionamentos deve ser passado juntamente na query o seguinte padrão:
+```
+$include model.submodel.submodel|model2
+
+```
+Exemplo: na query de Endereco é necessário trazer os dados de cidade e estado, entao usa-se 
+```
+/rota?$include='cidade.estado'
+```
