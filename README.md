@@ -87,7 +87,7 @@ Exemplo: na query de Doador é necessário trazer os dados de um nome começado 
 
 Normal filter é um operador lógico que busca igualdade na busca, caso não encontre o atributo com a determinada key de busca não será retornado nada. O Normal é passado juntamente na query em formato de string o seguinte padrão:
 ```
-coluna:"key"
+coluna "key"
 
 ```
 Exemplo: na query de Doador é necessário trazer os dados de um nome Pedro, entao usa-se :
