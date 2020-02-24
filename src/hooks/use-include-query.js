@@ -5,6 +5,7 @@
 module.exports = (options = {}) => {
   return async context => {
     const sequelize = context.app.get("sequelizeClient");
+
     const include =
       context.params && context.params.query && context.params.query.$include;
 

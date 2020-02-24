@@ -1,6 +1,6 @@
 {
   "host": "localhost",
-  "port":3000,
+  "port": 3000,
   "public": "../public/",
   "paginate": {
     "default": 10,
@@ -10,10 +10,7 @@
     "entity": "usuario",
     "service": "usuario",
     "secret": "qWZ3qdYxkbnOjeh6YgqlVFTzCus=",
-    "authStrategies": [
-      "jwt",
-      "local"
-    ],
+    "authStrategies": ["jwt", "local"],
     "jwtOptions": {
       "header": {
         "typ": "access"
@@ -24,7 +21,7 @@
       "expiresIn": "1d"
     },
     "local": {
-      "usernameField": "email",
+      "usernameField": "identificador",
       "passwordField": "password"
     }
   },

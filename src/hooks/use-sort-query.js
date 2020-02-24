@@ -5,21 +5,20 @@
 module.exports = (options = {}) => {
   return async context => {
     const sort =
-      context.params && context.params.query && context.params.query.$sort
-      console.log(sort);
+      context.params && context.params.query && context.params.query.$sort;
 
     if (sort) {
       const sortBy = Object.entries(JSON.parse(sort)).map(([key, value]) => [
         key,
         value
-      ])
+      ]);
       context.params.sequelize = {
         ...context.params.sequelize,
         order: sortBy
-      }
-      delete context.params.query.$sort
+      };
+      delete context.params.query.$sort;
     }
 
-    return context
-  }
+    return context;
+  };
 };
