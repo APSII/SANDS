@@ -22,7 +22,8 @@
     },
     "local": {
       "usernameField": "identificador",
-      "passwordField": "password"
+      "passwordField": "password",
+      "errorMessage": "Usuario ou senha incorretos"
     }
   },
   "postgres": "postgres://postgres@localhost/postgres"
