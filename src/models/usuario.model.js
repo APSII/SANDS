@@ -31,7 +31,8 @@ module.exports = function(app) {
         allowNull: false
       },
       ativo: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,

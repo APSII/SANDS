@@ -18,7 +18,8 @@ module.exports = function(app) {
         type: Sequelize.STRING
       },
       ativo: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       createdAt: {
         allowNull: false,

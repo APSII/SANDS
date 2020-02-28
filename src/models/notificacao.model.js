@@ -19,10 +19,12 @@ module.exports = function (app) {
       type: Sequelize.STRING
     },
     enviado: {
-      type: Sequelize.BOOLEAN
+      type: Sequelize.BOOLEAN,
+      defaultValue: true
     },
     ativo: {
-      type: Sequelize.BOOLEAN
+      type: Sequelize.BOOLEAN,
+      defaultValue: true
     },
     createdAt: {
       allowNull: false,
