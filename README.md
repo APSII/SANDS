@@ -98,6 +98,7 @@ Exemplo: na query de Doador é necessário trazer os dados de um nome Pedro, ent
 Todas as rotas para CRUDS 
 
 **USUARIO**
+```
 create
 POST url/usuario
 Authorization: "not required"
@@ -105,8 +106,6 @@ Authorization: "not required"
     "nome": "Joao",
     "email": "joao@teste.com",
     "hemocentroId": 2,
-    "updatedAt": "2020-02-27T19:33:40.404Z",
-    "createdAt": "2020-02-27T19:33:40.404Z",
     "identificador": "H(id da unidade)U(id do usuario)",
     "ativo": true
   }
@@ -118,8 +117,6 @@ Authorization: "Bearer {{token}}"
     "nome": "Joao",
     "email": "joao@teste.com",
     "hemocentroId": 2,
-    "updatedAt": "2020-02-27T19:33:40.404Z",
-    "createdAt": "2020-02-27T19:33:40.404Z",
     "identificador": "H(id da unidade)U(id do usuario)",
     "ativo": true
   }
@@ -135,17 +132,16 @@ Authorization: "Bearer {{token}}"
 delete
 DEL url/usuario/id
 Authorization: "Bearer {{token}}"
-
+```
 
 **ENDERECO**
+```
 create
 POST url/endereco
 Authorization: "Bearer {{token}}"
 {
     "endereco": "rua sao jao",
     "cidadeId": 2,
-    "updatedAt": "2020-02-27T19:33:24.471Z",
-    "createdAt": "2020-02-27T19:33:24.471Z",
     "ativo": true   
   }
 
@@ -155,8 +151,6 @@ Authorization: "Bearer {{token}}"
 {
     "endereco": "rua sao jao",
     "cidadeId": 2,
-    "updatedAt": "2020-02-27T19:33:24.471Z",
-    "createdAt": "2020-02-27T19:33:24.471Z",
     "ativo": true
   }
 
@@ -179,8 +173,6 @@ Authorization: "Bearer {{token}}"
 {
   "ativo": true,
   "nome": "Cuiaba",
-  "updatedAt": "2020-02-28T16:12:05.842Z",
-  "createdAt": "2020-02-28T16:12:05.842Z",
   "acronimo": "MT"
 }
 
@@ -190,8 +182,6 @@ Authorization: "Bearer {{token}}"
 {
   "ativo": true,
   "nome": "Cuiaba",
-  "updatedAt": "2020-02-28T16:12:05.842Z",
-  "createdAt": "2020-02-28T16:12:05.842Z",
   "acronimo": "MT"
 }
 
@@ -206,16 +196,16 @@ Authorization: "Bearer {{token}}"
 delete
 DEL url/estado/id
 Authorization: "Bearer {{token}}"
+```
 
 **CIDADE**
+```
 create
 POST url/cidade
 Authorization: "Bearer {{token}}"
 {
     "nome": "Cuiaba",
     "estadoId": 1,
-    "updatedAt": "2020-02-27T19:32:44.332Z",
-    "createdAt": "2020-02-27T19:32:44.332Z",
     "ativo": true
   }
 
@@ -225,8 +215,6 @@ Authorization: "Bearer {{token}}"
 {
     "nome": "Cuiaba",
     "estadoId": 1,
-    "updatedAt": "2020-02-27T19:32:44.332Z",
-    "createdAt": "2020-02-27T19:32:44.332Z",
     "ativo": true
   }
 
@@ -241,18 +229,17 @@ Authorization: "Bearer {{token}}"
 delete
 DEL url/cidade/id
 Authorization: "Bearer {{token}}"
-
+```
 
 **HEMOCENTRO**
+```
 create
 POST url/hemocentro
 Authorization: "Bearer {{token}}"
 {
   "nome": "Central",
   "enderecoId": 3,
-  "updatedAt": "2020-02-27T19:33:32.669Z",
-  "createdAt": "2020-02-27T19:33:32.669Z",
-  "ativo": null
+  "ativo": true
 }
 
 update
@@ -261,9 +248,7 @@ Authorization: "Bearer {{token}}"
 {
   "nome": "Central",
   "enderecoId": 3,
-  "updatedAt": "2020-02-27T19:33:32.669Z",
-  "createdAt": "2020-02-27T19:33:32.669Z",
-  "ativo": null
+  "ativo": true
 }
 
 getAll
@@ -277,16 +262,15 @@ Authorization: "Bearer {{token}}"
 delete
 DEL url/hemocentro/id
 Authorization: "Bearer {{token}}"
-
+```
 
 **DOACAO**
+```
 create
 POST url/doacao
 Authorization: "Bearer {{token}}"
 {
     "ativo": true,
-    "updatedAt": "2020-02-28T17:10:51.577Z",
-    "createdAt": "2020-02-28T17:10:51.577Z",
     "identificacao": 'teste',
     "dataUso": "10/10/2010",
     "usado": true,
@@ -298,8 +282,6 @@ PATCH url/doacao/id
 Authorization: "Bearer {{token}}"
 {
     "ativo": true,
-    "updatedAt": "2020-02-28T17:10:51.577Z",
-    "createdAt": "2020-02-28T17:10:51.577Z",
     "identificacao": 'teste',
     "dataUso": "10/10/2010",
     "usado": true,
@@ -317,16 +299,16 @@ Authorization: "Bearer {{token}}"
 delete
 DEL url/doacao/id
 Authorization: "Bearer {{token}}"
+```
 
 **DOADOR**
+```
 create
 POST url/doador
 Authorization: "Bearer {{token}}"
 {
   "ativo": true,
   "nome": "Central",
-  "updatedAt": "2020-02-28T17:07:18.019Z",
-  "createdAt": "2020-02-28T17:07:18.019Z",
   "cpf": "cpf",
   "dataNascimento": "10/10/2010",
   "telefone": "1232131312",
@@ -339,8 +321,6 @@ Authorization: "Bearer {{token}}"
 {
   "ativo": true,
   "nome": "Central",
-  "updatedAt": "2020-02-28T17:07:18.019Z",
-  "createdAt": "2020-02-28T17:07:18.019Z",
   "cpf": "cpf",
   "dataNascimento": "10/10/2010,
   "telefone": "1232131312",
@@ -358,14 +338,14 @@ Authorization: "Bearer {{token}}"
 delete
 DEL url/doador/id
 Authorization: "Bearer {{token}}"
+```
 
 **NOTIFICACAO**
+```
 create
 POST url/notificacao
 Authorization: "Bearer {{token}}"
 {
-  "updatedAt": "2020-02-28T16:05:49.331Z",
-  "createdAt": "2020-02-28T16:05:49.331Z",
   "mensagem": "mensagem",
   "anexoUrl": "url",
   "enviado": true,
@@ -397,4 +377,15 @@ Authorization: "Bearer {{token}}"
 delete
 DEL url/notificacao/id
 Authorization: "Bearer {{token}}"
+```
 
+**AUTENTICACAO**
+```
+POST url/auth
+Authorization: "not required"
+{
+ "identificador":"JO-1",
+"password":"12342",
+"strategy":"local"
+}
+```
