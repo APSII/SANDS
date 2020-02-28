@@ -134,39 +134,8 @@ DEL url/usuario/id
 Authorization: "Bearer {{token}}"
 ```
 
-**ENDERECO**
-```
-create
-POST url/endereco
-Authorization: "Bearer {{token}}"
-{
-    "endereco": "rua sao jao",
-    "cidadeId": 2,
-    "ativo": true   
-  }
-
-update
-PATCH url/endereco/id
-Authorization: "Bearer {{token}}"
-{
-    "endereco": "rua sao jao",
-    "cidadeId": 2,
-    "ativo": true
-  }
-
-getAll
-GET url/endereco
-Authorization: "Bearer {{token}}"
-
-find
-GET url/endereco/id
-Authorization: "Bearer {{token}}"
-
-delete
-DEL url/endereco/id
-Authorization: "Bearer {{token}}"
-
 **ESTADO**
+```
 create
 POST url/estado
 Authorization: "Bearer {{token}}"
@@ -231,6 +200,38 @@ DEL url/cidade/id
 Authorization: "Bearer {{token}}"
 ```
 
+**ENDERECO**
+```
+create
+POST url/endereco
+Authorization: "Bearer {{token}}"
+{
+    "endereco": "rua sao jao",
+    "cidadeId": 2,
+    "ativo": true   
+  }
+
+update
+PATCH url/endereco/id
+Authorization: "Bearer {{token}}"
+{
+    "endereco": "rua sao jao",
+    "cidadeId": 2,
+    "ativo": true
+  }
+
+getAll
+GET url/endereco
+Authorization: "Bearer {{token}}"
+
+find
+GET url/endereco/id
+Authorization: "Bearer {{token}}"
+
+delete
+DEL url/endereco/id
+Authorization: "Bearer {{token}}"
+```
 **HEMOCENTRO**
 ```
 create
