@@ -16,18 +16,6 @@ module.exports = function(app) {
       },
       nome: {
         type: Sequelize.STRING
-      },
-      ativo: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: true
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     },
     {
@@ -35,7 +23,7 @@ module.exports = function(app) {
         beforeCount(options) {
           options.raw = true;
         }
-      }
+      } 
     }
   );
 

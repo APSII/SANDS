@@ -19,18 +19,6 @@ module.exports = function(app) {
       },
       acronimo: {
         type: Sequelize.STRING
-      },
-      ativo: {
-        type: Sequelize.BOOLEAN,
-        defaultValue: true
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     },
     {
