@@ -40,9 +40,15 @@ module.exports = function(app) {
   );
 
   // eslint-disable-next-line no-unused-vars
-  hemocentro.associate = function({ usuario, endereco }) {
+  hemocentro.associate = function({ usuario, endereco, doador }) {
     // Define associations here
     hemocentro.hasMany(usuario);
+    hemocentro.hasMany(doador, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+
     hemocentro.belongsTo(endereco);
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };

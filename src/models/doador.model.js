@@ -29,6 +29,9 @@ module.exports = function(app) {
       email: {
         type: Sequelize.STRING
       },
+      tipoSangue: {
+        type: Sequelize.STRING
+      },
       ativo: {
         type: Sequelize.BOOLEAN,
         defaultValue: true
@@ -52,13 +55,15 @@ module.exports = function(app) {
   );
 
   // eslint-disable-next-line no-unused-vars
-  doador.associate = function({ doacao }) {
+  doador.associate = function({ doacao, hemocentro }) {
     // Define associations here
     doador.hasMany(doacao, {
       foreignKey: {
         allowNull: false
       }
     });
+    
+    hemocentro.belongsTo(hemocentro);
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
